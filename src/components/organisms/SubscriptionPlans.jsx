@@ -34,7 +34,7 @@ const SubscriptionPlans = () => {
       isPopular: true
     },
     {
-      tier: "Enterprise",
+tier: "Enterprise",
       price: 299,
       features: [
         "Unlimited data sources",
@@ -45,6 +45,22 @@ const SubscriptionPlans = () => {
         "Custom integrations",
         "Team collaboration",
         "Advanced security"
+      ]
+    },
+    {
+      tier: "Snap",
+      price: 499,
+      features: [
+        "Everything in Enterprise",
+        "Dedicated cloud-based ML analysis",
+        "Custom dataset processing",
+        "Real-time AI insights",
+        "Advanced predictive modeling",
+        "Dedicated ML infrastructure",
+        "Priority ML support",
+        "Custom algorithm development",
+        "Advanced data visualization",
+        "Enterprise-grade security"
       ]
     }
   ];
