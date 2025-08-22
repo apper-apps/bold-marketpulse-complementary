@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import 'react-toastify/dist/ReactToastify.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.Toastify__toast {
+  @apply rounded-lg shadow-custom;
+}
+
+.Toastify__toast--info {
+  background: linear-gradient(135deg, #5B47E0 0%, #7B68EE 100%);
+  color: white;
+}
+
+.Toastify__toast--success {
+  background: linear-gradient(135deg, #10B981 0%, #34D399 100%);
+  color: white;
+}
+
+.Toastify__toast--error {
+  background: linear-gradient(135deg, #EF4444 0%, #F87171 100%);
+  color: white;
+}
+
+.Toastify__progress-bar {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.Toastify__toast-container {
+  z-index: 9999;
+  width: auto;
+  max-width: 400px;
+}
+
+.Toastify__toast {
+  min-height: auto;
+  padding: 1rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  border-radius: 0.75rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: #F8F9FD;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #5B47E0 0%, #00D4FF 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.heat-map-low {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.2) 0%, rgba(52, 211, 153, 0.1) 100%);
+  border-left: 4px solid #10B981;
+}
+
+.heat-map-medium {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.2) 0%, rgba(251, 191, 36, 0.1) 100%);
+  border-left: 4px solid #F59E0B;
+}
+
+.heat-map-high {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.2) 0%, rgba(248, 113, 113, 0.1) 100%);
+  border-left: 4px solid #EF4444;
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.number-animate {
+  transition: all 0.3s ease;
+}

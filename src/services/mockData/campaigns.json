@@ -1,0 +1,92 @@
+[
+  {
+    "Id": 1,
+    "sourceId": "1",
+    "name": "Q4 Holiday Sale",
+    "metrics": {
+      "impressions": 125000,
+      "clicks": 3750,
+      "conversions": 188,
+      "spend": 8500,
+      "ctr": 3.0,
+      "conversionRate": 5.01,
+      "cpc": 2.27
+    },
+    "normalizedData": {
+      "platform": "google-ads",
+      "dateRange": "2024-01-01 to 2024-01-31"
+    }
+  },
+  {
+    "Id": 2,
+    "sourceId": "2",
+    "name": "Brand Awareness Push",
+    "metrics": {
+      "impressions": 89000,
+      "clicks": 2225,
+      "conversions": 89,
+      "spend": 6700,
+      "ctr": 2.5,
+      "conversionRate": 4.0,
+      "cpc": 3.01
+    },
+    "normalizedData": {
+      "platform": "facebook-ads",
+      "dateRange": "2024-01-01 to 2024-01-31"
+    }
+  },
+  {
+    "Id": 3,
+    "sourceId": "1",
+    "name": "Spring Collection Launch",
+    "metrics": {
+      "impressions": 156000,
+      "clicks": 4680,
+      "conversions": 234,
+      "spend": 12300,
+      "ctr": 3.0,
+      "conversionRate": 5.0,
+      "cpc": 2.63
+    },
+    "normalizedData": {
+      "platform": "google-ads",
+      "dateRange": "2024-02-01 to 2024-02-29"
+    }
+  },
+  {
+    "Id": 4,
+    "sourceId": "5",
+    "name": "B2B Lead Generation",
+    "metrics": {
+      "impressions": 45000,
+      "clicks": 1350,
+      "conversions": 54,
+      "spend": 4200,
+      "ctr": 3.0,
+      "conversionRate": 4.0,
+      "cpc": 3.11
+    },
+    "normalizedData": {
+      "platform": "linkedin-ads",
+      "dateRange": "2024-01-15 to 2024-02-15"
+    }
+  },
+  {
+    "Id": 5,
+    "sourceId": "2",
+    "name": "Retargeting Campaign",
+    "metrics": {
+      "impressions": 67000,
+      "clicks": 2010,
+      "conversions": 141,
+      "spend": 5800,
+      "ctr": 3.0,
+      "conversionRate": 7.01,
+      "cpc": 2.89
+    },
+    "normalizedData": {
+      "platform": "facebook-ads",
+      "dateRange": "2024-01-10 to 2024-02-10"
+    }
+  }
+]
