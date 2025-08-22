@@ -48,16 +48,16 @@ const InsightGrid = () => {
       <FilterBar onFilterChange={handleFilterChange} />
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {insights.map((insight) => (
+{insights.map((insight) => (
           <InsightCard
             key={insight.Id}
-            title={insight.title}
-            description={insight.description}
-            metric={insight.metric}
-            value={insight.value}
-            prediction={insight.prediction}
-            severity={insight.severity}
-            type={insight.type}
+            title_c={insight.title_c}
+            description_c={insight.description_c}
+            metric_c={insight.metric_c}
+            value_c={insight.value_c}
+            prediction_c={insight.prediction_c}
+            severity_c={insight.severity_c}
+            type_c={insight.type_c}
           />
         ))}
       </div>

@@ -39,7 +39,7 @@ const Header = ({ onMenuToggle, title = "Dashboard" }) => {
               
               <div className="h-8 w-px bg-gray-200"></div>
               
-              <div className="flex items-center space-x-3">
+<div className="flex items-center space-x-3">
                 <div className="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
                   <ApperIcon name="User" size={16} className="text-white" />
                 </div>
@@ -47,6 +47,18 @@ const Header = ({ onMenuToggle, title = "Dashboard" }) => {
                   <p className="text-sm font-medium text-gray-900">Marketing Team</p>
                   <p className="text-xs text-gray-500">Pro Plan</p>
                 </div>
+                <Button 
+                  variant="secondary" 
+                  size="sm"
+                  onClick={() => {
+                    const { ApperUI } = window.ApperSDK;
+                    ApperUI.logout();
+                  }}
+                  className="flex items-center"
+                >
+                  <ApperIcon name="LogOut" size={14} className="mr-1" />
+                  Logout
+                </Button>
               </div>
             </div>
           </div>

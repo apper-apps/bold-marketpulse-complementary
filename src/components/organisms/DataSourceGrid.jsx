@@ -88,14 +88,14 @@ const DataSourceGrid = () => {
         <Empty type="dataSources" onAction={handleAddDataSource} />
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {dataSources.map((source) => (
+{dataSources.map((source) => (
             <DataSourceCard
               key={source.Id}
-              name={source.name}
-              type={source.type}
-              status={source.status}
-              lastSync={source.lastSync}
-              onSync={() => handleSync(source.Id, source.name)}
+              Name={source.Name}
+              type_c={source.type_c}
+              status_c={source.status_c}
+              last_sync_c={source.last_sync_c}
+              onSync={() => handleSync(source.Id, source.Name)}
               onConfigure={() => handleConfigure(source.Id)}
             />
           ))}

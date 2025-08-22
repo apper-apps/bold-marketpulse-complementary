@@ -5,9 +5,9 @@ import Badge from "@/components/atoms/Badge";
 import Button from "@/components/atoms/Button";
 import { cn } from "@/utils/cn";
 
-const DataSourceCard = ({ name, type, status, lastSync, onSync, onConfigure, className }) => {
+const DataSourceCard = ({ Name, type_c, status_c, last_sync_c, onSync, onConfigure, className }) => {
   const getStatusVariant = () => {
-    switch (status) {
+    switch (status_c) {
       case "connected": return "success";
       case "error": return "error";
       case "syncing": return "info";
@@ -16,11 +16,12 @@ const DataSourceCard = ({ name, type, status, lastSync, onSync, onConfigure, cla
   };
 
   const getTypeIcon = () => {
-    switch (type) {
+    switch (type_c) {
       case "google-analytics": return "BarChart3";
       case "facebook-ads": return "Facebook";
       case "csv": return "FileText";
       case "shopify": return "ShoppingBag";
+      case "linkedin-ads": return "Linkedin";
       default: return "Database";
     }
   };
@@ -34,18 +35,18 @@ const DataSourceCard = ({ name, type, status, lastSync, onSync, onConfigure, cla
               <ApperIcon name={getTypeIcon()} className="text-primary" size={20} />
             </div>
             <div>
-              <h3 className="font-semibold text-gray-900">{name}</h3>
-              <p className="text-sm text-gray-500 capitalize">{type.replace("-", " ")}</p>
+              <h3 className="font-semibold text-gray-900">{Name}</h3>
+              <p className="text-sm text-gray-500 capitalize">{type_c?.replace("-", " ")}</p>
             </div>
           </div>
           <Badge variant={getStatusVariant()}>
-            {status === "syncing" && <ApperIcon name="Loader" size={12} className="mr-1 animate-spin" />}
-            {status}
+            {status_c === "syncing" && <ApperIcon name="Loader" size={12} className="mr-1 animate-spin" />}
+            {status_c}
           </Badge>
         </div>
 
         <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-          <span>Last sync: {lastSync}</span>
+          <span>Last sync: {last_sync_c || "Never"}</span>
         </div>
 
         <div className="flex space-x-2">
@@ -53,10 +54,10 @@ const DataSourceCard = ({ name, type, status, lastSync, onSync, onConfigure, cla
             variant="primary"
             size="sm"
             onClick={onSync}
-            disabled={status === "syncing"}
+            disabled={status_c === "syncing"}
             className="flex-1"
           >
-            {status === "syncing" ? (
+            {status_c === "syncing" ? (
               <>
                 <ApperIcon name="Loader" size={14} className="mr-1 animate-spin" />
                 Syncing

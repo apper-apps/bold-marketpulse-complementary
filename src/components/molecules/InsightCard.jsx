@@ -4,9 +4,9 @@ import ApperIcon from "@/components/ApperIcon";
 import Badge from "@/components/atoms/Badge";
 import { cn } from "@/utils/cn";
 
-const InsightCard = ({ title, description, metric, value, prediction, severity = "low", type, className }) => {
+const InsightCard = ({ title_c, description_c, metric_c, value_c, prediction_c, severity_c = "low", type_c, className }) => {
   const getSeverityVariant = () => {
-    switch (severity) {
+    switch (severity_c) {
       case "high": return "error";
       case "medium": return "warning";
       default: return "success";
@@ -14,7 +14,7 @@ const InsightCard = ({ title, description, metric, value, prediction, severity =
   };
 
   const getSeverityClass = () => {
-    switch (severity) {
+    switch (severity_c) {
       case "high": return "heat-map-high";
       case "medium": return "heat-map-medium";
       default: return "heat-map-low";
@@ -22,13 +22,23 @@ const InsightCard = ({ title, description, metric, value, prediction, severity =
   };
 
   const getTypeIcon = () => {
-    switch (type) {
+    switch (type_c) {
       case "anomaly": return "AlertTriangle";
       case "prediction": return "TrendingUp";
       case "opportunity": return "Target";
       default: return "Lightbulb";
     }
   };
+
+  // Parse prediction_c if it's a JSON string
+  let prediction = prediction_c;
+  if (typeof prediction_c === 'string') {
+    try {
+      prediction = JSON.parse(prediction_c);
+    } catch (e) {
+      prediction = null;
+    }
+  }
 
   return (
     <Card className={cn("hover:shadow-premium transition-all duration-300 cursor-pointer", getSeverityClass(), className)}>
@@ -37,19 +47,19 @@ const InsightCard = ({ title, description, metric, value, prediction, severity =
           <div className="flex items-center space-x-2">
             <ApperIcon name={getTypeIcon()} className="text-gray-600" size={16} />
             <Badge variant={getSeverityVariant()}>
-              {severity.toUpperCase()}
+              {severity_c?.toUpperCase() || 'LOW'}
             </Badge>
           </div>
           <ApperIcon name="ChevronRight" className="text-gray-400" size={16} />
         </div>
 
-        <h3 className="font-semibold text-gray-900 mb-2">{title}</h3>
-        <p className="text-sm text-gray-600 mb-4 line-clamp-2">{description}</p>
+        <h3 className="font-semibold text-gray-900 mb-2">{title_c}</h3>
+        <p className="text-sm text-gray-600 mb-4 line-clamp-2">{description_c}</p>
 
         <div className="space-y-2">
           <div className="flex items-center justify-between">
-            <span className="text-sm text-gray-500">{metric}</span>
-            <span className="text-lg font-bold gradient-text number-animate">{value}</span>
+            <span className="text-sm text-gray-500">{metric_c}</span>
+            <span className="text-lg font-bold gradient-text number-animate">{value_c}</span>
           </div>
           {prediction && (
             <div className="flex items-center justify-between">
