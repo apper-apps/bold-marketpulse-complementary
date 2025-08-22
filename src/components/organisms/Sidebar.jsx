@@ -6,10 +6,11 @@ import { cn } from "@/utils/cn";
 const Sidebar = ({ isOpen, onToggle }) => {
   const location = useLocation();
 
-  const navItems = [
+const navItems = [
     { path: "/", icon: "BarChart3", label: "Dashboard" },
     { path: "/data-sources", icon: "Database", label: "Data Sources" },
     { path: "/insights", icon: "Lightbulb", label: "Insights" },
+    { path: "/team-accounts", icon: "Users", label: "Team Accounts" },
     { path: "/settings", icon: "Settings", label: "Settings" }
   ];
 

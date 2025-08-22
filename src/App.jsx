@@ -8,13 +8,13 @@ import Dashboard from "@/components/pages/Dashboard";
 import DataSources from "@/components/pages/DataSources";
 import Insights from "@/components/pages/Insights";
 import Settings from "@/components/pages/Settings";
+import TeamAccounts from "@/components/pages/TeamAccounts";
 import Login from '@/components/pages/Login';
 import Signup from '@/components/pages/Signup';
 import Callback from '@/components/pages/Callback';
 import ErrorPage from '@/components/pages/ErrorPage';
 import ResetPassword from '@/components/pages/ResetPassword';
 import PromptPassword from '@/components/pages/PromptPassword';
-
 // Create auth context
 export const AuthContext = createContext(null);
 
@@ -128,10 +128,11 @@ function AppContent() {
           <Route path="/error" element={<ErrorPage />} />
           <Route path="/prompt-password/:appId/:emailAddress/:provider" element={<PromptPassword />} />
           <Route path="/reset-password/:appId/:fields" element={<ResetPassword />} />
-          <Route path="/" element={<Layout />}>
+<Route path="/" element={<Layout />}>
             <Route index element={<Dashboard />} />
             <Route path="data-sources" element={<DataSources />} />
             <Route path="insights" element={<Insights />} />
+            <Route path="team-accounts" element={<TeamAccounts />} />
             <Route path="settings" element={<Settings />} />
           </Route>
         </Routes>
